@@ -1,11 +1,10 @@
-// NOVO CÓDIGO PARA src/app/components/Hero.tsx
+// src/app/components/Hero.tsx
 'use client'
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+// Removida a importação de Image, FaLinkedin, FaTwitter, pois não estão sendo usados
+import { FaGithub } from 'react-icons/fa'; // Apenas FaGithub, pois é o único usado
 import { motion } from 'framer-motion';
-// Se o caminho de suas animações for diferente, ajuste aqui:
 import { fadeInUp, fadeIn, scaleIn } from '@/utils/animations'; 
 
 export default function Hero() {
@@ -18,6 +17,9 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
+            {/* O componente Image (que renderiza a foto de perfil) foi removido ou não está sendo usado */}
+            {/* Se você quiser adicionar a imagem de perfil novamente, descomente e reimporte 'Image' */}
+            {/* Exemplo: <Image src="/profile.avif" alt="Foto de Perfil" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" /> */}
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -37,7 +39,7 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            Tecnico em Desenvolvedor de Sistemas | Formado pela ETEC Camargo Aranha
+            Técnico em Desenvolvedor de Sistemas | Formado pela ETEC Camargo Aranha
           </motion.p>
           <motion.div 
             className="flex justify-center space-x-4 mb-8"
@@ -54,6 +56,7 @@ export default function Hero() {
             >
               <FaGithub />
             </motion.a>
+            {/* Os links para LinkedIn e Twitter foram removidos */}
           </motion.div>
           <motion.div 
             className="flex flex-col md:flex-row justify-center gap-4"

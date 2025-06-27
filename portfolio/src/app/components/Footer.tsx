@@ -1,10 +1,9 @@
 // src/app/components/Footer.tsx
 import Link from 'next/link'
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa' // Apenas FaGithub, pois FaTwitter e FaLinkedin não são mais usados
 
 export default function Footer() {
   return (
-    // Certifique-se de que não há espaços ou caracteres invisíveis antes desta linha
     <footer className="bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800">
       <div className="container max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -26,6 +25,7 @@ export default function Footer() {
             >
               <FaGithub className="h-6 w-6" />
             </a>
+            {/* Os links para Twitter e LinkedIn foram removidos */}
           </div>
         </div>
       </div>

@@ -6,7 +6,8 @@ import { projects } from '../../contents/projects'; // Caminho relativo para seu
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations';
+// Removido staggerContainer, pois não está sendo usado
+import { fadeInUp, cardHoverSmall } from '@/utils/animations'; // <-- staggerContainer foi removido aqui
 
 export default function ProjectsPage() {
   // Pegamos apenas o primeiro projeto do array
@@ -33,7 +34,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Meu Projeto {/* Título agora no singular */}
+          Meu Projeto 
         </motion.h1>
         <motion.p 
           className="text-lg text-secondary dark:text-gray-300 mb-12 text-center max-w-3xl mx-auto"
